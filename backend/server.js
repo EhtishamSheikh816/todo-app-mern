@@ -7,7 +7,6 @@ import Todo from "./models/todoModel.js";
 
 dotenv.config();
 const app = express();
-const port = 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -111,8 +110,4 @@ app.delete("/todo/:id", async (req, res) => {
       error: error.message,
     });
   }
-});
-
-app.listen(port, () => {
-  console.log(`server is running on http://localhost:${port}`);
 });
