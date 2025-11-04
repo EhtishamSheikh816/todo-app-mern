@@ -1,22 +1,15 @@
 import express from "express";
-import dotenv from "dotenv";
+import "dotenv/config.js";
 import cors from "cors";
 
 import connection from "./config/db.js";
 import Todo from "./models/todoModel.js";
 
-dotenv.config();
-
 const app = express();
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
-app.use(express.json());
+const PORT = process.env.PORT || 3000;
 
+app.use(cors());
+app.use(express.json());
 connection();
 
 app.get("/", (req, res) => {
@@ -119,4 +112,6 @@ app.delete("/todo/:id", async (req, res) => {
   }
 });
 
-export default app;
+app.listen(PORT, () => {
+  console.log(`Server running on port http://localhost:${PORT}`);
+});
