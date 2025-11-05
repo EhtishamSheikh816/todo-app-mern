@@ -17,7 +17,7 @@ const TodoInput = ({ setTodos }) => {
 
     try {
       const res = await axios.post(`${API_URL}/todo`, newTodo);
-      setTodos((prev) => [...prev, res.data]);
+      setTodos((prev) => [...prev, res.data.data]);
       toast.success("✅ Todo added successfully!");
       setTodo("");
     } catch (err) {
