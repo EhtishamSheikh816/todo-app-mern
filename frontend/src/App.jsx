@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-indigo-100 via-white to-purple-100 dark:from-[#0d0d0d] dark:via-[#121212] dark:to-[#1a1a1a] transition-all duration-500 px-4">
-      <div className="w-3/5 mx-auto bg-white dark:bg-[#1E1E1E] rounded-2xl shadow-2xl py-6 px-3 sm:py-8 sm:px-4 md:py-10 md:px-5 flex flex-col items-center text-center border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(79,70,229,0.3)]">
+      <div className="md:w-3/5 mx-auto bg-white dark:bg-[#1E1E1E] rounded-2xl shadow-2xl py-6 px-3 sm:py-8 sm:px-4 md:py-10 md:px-5 flex flex-col items-center text-center border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(79,70,229,0.3)]">
         <header className="mb-6 space-y-2">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 dark:text-gray-100 tracking-tight">
             ✨ My Tasks
