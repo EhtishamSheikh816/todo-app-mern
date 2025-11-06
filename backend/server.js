@@ -59,6 +59,23 @@ app.get("/todo", async (req, res) => {
   }
 });
 
+app.delete("/todos", async (req, res) => {
+  try {
+    await Todo.deleteMany({});
+    res.status(200).json({
+      success: true,
+      message: "All todos deleted successfully!",
+    });
+  } catch (err) {
+    console.error("Error deleting all todos:", err);
+    res.status(500).json({
+      success: false,
+      message: "Failed to delete todos.",
+      error: err.message,
+    });
+  }
+});
+
 app.put("/todo/:id", async (req, res) => {
   try {
     const todo = await Todo.findById(req.params.id);
